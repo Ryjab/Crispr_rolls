@@ -5,13 +5,13 @@ import javax.persistence.Entity;
 @Entity
 public class Article {
 	private String titre;
-	private String image;
+	private String repoImage;
 	private String contenu;
 	
 	//constructeur
 	public Article(String title, String repositoryOfImage, String content)	{
 		this.titre = title;
-		this.image = repositoryOfImage;
+		this.repoImage = repositoryOfImage;
 		this.contenu = content;
 	}
 	
@@ -22,10 +22,10 @@ public class Article {
 		this.titre = titre;
 	}
 	public String getImage() {
-		return image;
+		return repoImage;
 	}
 	public void setImage(String image) {
-		this.image = image;
+		this.repoImage = image;
 	}
 	public String getContenu() {
 		return contenu;

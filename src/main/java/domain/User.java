@@ -1,5 +1,4 @@
 package domain;
-import org.springframework.boot.SpringApplication;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +25,7 @@ public class User {
 		this.password = pass;
 		this.type = type;
 	}
-	
+
 	public long getId() {
 		return id;
 	}
