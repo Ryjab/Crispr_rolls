@@ -8,7 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	
 	private String login;
 	
@@ -16,7 +18,7 @@ public class User {
 	
 	private String type;
 	
-
+	private Article article;
 	
 	//constructeur
 	public User (String log, String pass, String type) {
@@ -25,12 +27,11 @@ public class User {
 		this.type = type;
 	}
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	public void setId(int id) {
+
+	public void setId(long id) {
 		this.id = id;
 	}
 	
@@ -51,6 +52,14 @@ public class User {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public Article getArticle() {
+		return article;
+	}
+
+	public void setArticle(Article article) {
+		this.article = article;
 	}
 
 
