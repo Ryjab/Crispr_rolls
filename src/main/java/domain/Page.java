@@ -16,7 +16,13 @@ public class Page {
 
 	private Article article;
 
-
+	//constructeur 
+	public Page(String title,String type, String contenu, Article article){
+		this.titre = title;
+		this.type = type;
+		this.contenu = contenu;
+		this.article = article;
+	}
 
 	public String getTitre() {
 		return titre;

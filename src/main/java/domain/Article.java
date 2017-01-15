@@ -8,6 +8,12 @@ public class Article {
 	private String image;
 	private String contenu;
 	
+	//constructeur
+	public Article(String title, String repositoryOfImage, String content)	{
+		this.titre = title;
+		this.image = repositoryOfImage;
+		this.contenu = content;
+	}
 	
 	public String getTitre() {
 		return titre;

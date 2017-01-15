@@ -14,14 +14,15 @@ public class User {
 	
 	private String password;
 	
-	private String type[] = {"Chercheur" , "Visiteur" };
+	private String type;
 	
 
 	
 	//constructeur
-	public User (String log, String pass) {
+	public User (String log, String pass, String type) {
 		this.login=log;
 		this.password = pass;
+		this.type = type;
 	}
 	
 	public int getId() {
@@ -45,10 +46,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String[] getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(String type[]) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
