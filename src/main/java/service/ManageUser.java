@@ -32,7 +32,7 @@ public class ManageUser {
 		    super(message);
 		  }        
 	}
-	public void supprimerUser(){
+	public void supprimerUser(String login, String password, String type){
 		//voir comment interagir avec la BDD
 	}
 	

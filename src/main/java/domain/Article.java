@@ -3,7 +3,7 @@ package domain;
 import javax.persistence.Entity;
 
 @Entity
-public class Article {
+public class Article{
 	private String titre;
 	private String repoImage;
 	private String contenu;
