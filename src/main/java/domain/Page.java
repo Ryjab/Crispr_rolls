@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Page {
-
+	
 	private String titre;
 
 	private String type;
