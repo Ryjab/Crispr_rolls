@@ -1,9 +1,8 @@
-angular.module("crispr", ['ngRoute']).config(
+angular.module('crispr', ['ngRoute']).config(
     ['$routeProvider', function ($routeProvider) {
-        //noinspection JSUnresolvedFunction
         $routeProvider.when('/', {
             templateUrl: 'partials/home.html'
-        }).when('/connexion', {
+        }).when('/connection', {
             templateUrl: 'partials/FormConnection.html'
         }).otherwise({
             redirectTo: '/'

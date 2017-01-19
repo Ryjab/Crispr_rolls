@@ -1,2 +1,2 @@
 angular.module('crispr', [])
-    .controller("mainCtrl");
+    .controller('mainCtrl');
