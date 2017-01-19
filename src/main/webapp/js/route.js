@@ -1,10 +1,10 @@
 angular.module('crispr', ['ngRoute']).config(
     ['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
+        $routeProvider.when('/home', {
             templateUrl: 'partials/home.html'
-        }).when('/connection', {
-            templateUrl: 'partials/FormConnection.html'
+        }).when('/connexion', {
+            templateUrl: 'partials/formConnection.html'
         }).otherwise({
-            redirectTo: '/'
+            redirectTo: '/home'
         });
     }]);
