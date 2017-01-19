@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="crispr">
     <head>
         <!-- En-tete de la page -->
         <meta charset="utf-8" />
         <title>Crispr_rolls</title>
-        <link rel="stylesheet" href="vendor/">
+        <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     <body>
     <!-- emplacement navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="media/logo.png"> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">ACCUEIL</a></li>
+                <li><a href="#connection">Connection</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> VIDE</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>  VIDE</a></li>
+            </ul>
+        </div>
+    </nav>
     <main class="container">
         <div ng-view>
             <!-- chargement des partials -->
@@ -16,5 +32,7 @@
     <!-- emplacement des scripts js -->
     <script src="vendor/angular.js"></script>
     <script src="vendor/jquery-3.1.1.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/route.js"></script>
     </body>
 </html>
