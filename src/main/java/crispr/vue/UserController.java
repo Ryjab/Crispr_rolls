@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import crispr.domain.User;
 import crispr.service.ManageUser;
 import crispr.service.ManageUserImpl;
 import crispr.service.ManageUserImpl.passException;

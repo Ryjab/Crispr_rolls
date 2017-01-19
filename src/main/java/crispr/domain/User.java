@@ -4,11 +4,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 @Entity
 public class User {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	@JsonIgnore
 	private long id;
 	
 	private String login;
@@ -19,13 +20,16 @@ public class User {
 	
 	private Article article;
 	
+	public User() {
+	}
 	//constructeur
 	public User (String log, String pass, String type) {
 		this.login=log;
 		this.password = pass;
 		this.type = type;
 	}
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
