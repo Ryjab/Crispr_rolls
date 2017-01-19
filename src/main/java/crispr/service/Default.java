@@ -1,4 +1,4 @@
-package service;
+package crispr.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
