@@ -1,4 +1,4 @@
-package Crispr_rolls;
+package crisprTest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

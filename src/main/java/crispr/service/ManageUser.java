@@ -2,7 +2,7 @@ package crispr.service;
 
 import crispr.service.ManageUserImpl.passException;
 import crispr.service.ManageUserImpl.typeException;
-import crispr.vue.User;
+import crispr.domain.User;
 
 public interface ManageUser {
 	public void creerUser (User user) throws  typeException, passException;
