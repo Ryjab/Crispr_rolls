@@ -1,1 +1,4 @@
-angular.module('crispr', []);
+angular.module('crispr', [])
+    .controller('mainCtrl')
+    .controller('connexionCtrl');
+

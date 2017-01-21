@@ -4,29 +4,24 @@
         <!-- En-tete de la page -->
         <meta charset="utf-8" />
         <title>Crispr_rolls</title>
-        <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" >
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css"  >
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" >
+
     </head>
     <body>
     <!-- emplacement navbar -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#home">ACCUEIL</a></li>
-                <li><a href="#connexion">CONNECTION</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="container">
-        <div ng-view>
+    <a href="#">Home</a>
+    <div class="container">
+        <main ng-view>
             <!-- chargement des partials -->
-        </div>
-    </main>
+        </main>
+    </div>
     <!-- emplacement des scripts js -->
     <script src="vendor/angular-1.6.1/angular.min.js"></script>
     <script src="vendor/angular-1.6.1/angular-route.min.js"></script>
-    <script src="vendor/jquery-3.1.1.js"></script>
+    <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/connexionCtrl.js"></script>
     <script src="js/app.js"></script>
     <script src="js/route.js"></script>
     </body>
