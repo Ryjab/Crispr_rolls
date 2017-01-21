@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html ng-app='crispr'>
-    <head>
-        <!-- En-tete de la page -->
-        <meta charset="utf-8" />
-        <title>Crispr_rolls</title>
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css"  >
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" >
+<html ng-app="crispr">
+<head>
+    <meta charset="UTF-8">
+    <title>Webapplication Crispr</title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+</head>
+<body>
+<a href="#connexion">Connexion</a>
+<!-- we want to do stuff on PDF -->
 
-    </head>
-    <body>
-    <!-- emplacement navbar -->
-    <a href="#">Home</a>
-    <div class="container">
-        <main ng-view>
-            <!-- chargement des partials -->
-        </main>
-    </div>
-    <!-- emplacement des scripts js -->
-    <script src="vendor/angular-1.6.1/angular.min.js"></script>
-    <script src="vendor/angular-1.6.1/angular-route.min.js"></script>
-    <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="js/mainCtrl.js"></script>
-    <script src="js/connexionCtrl.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/route.js"></script>
-    </body>
+<div class="container">
+    <main ng-view></main>
+</div>
+
+<script src="vendor/jquery-1.12.2.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/angularjs.js"></script>
+<script src="vendor/angularjs-route.js"></script>
+<script src="vendor/angular-animate.js"></script>
+<!-- on insère ici -->
+<script src="js/app.js"></script>
+<script src="js/route.js"></script>
+</body>
 </html>
