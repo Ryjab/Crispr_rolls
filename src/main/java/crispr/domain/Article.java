@@ -14,6 +14,7 @@ public class Article{
 		this.repoImage = repositoryOfImage;
 		this.contenu = content;
 	}
+	public Article(){}
 	
 	public String getTitre() {
 		return titre;
