@@ -1,4 +1,4 @@
-package crispr.vue;
+package crispr.web;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import crispr.domain.User;
-import crispr.service.ManageUser;
 import crispr.service.ManageUserImpl;
 import crispr.service.ManageUserImpl.passException;
 import crispr.service.ManageUserImpl.typeException;
@@ -16,7 +15,7 @@ import crispr.service.ManageUserImpl.typeException;
 
 @RestController
 public class UserController {
-	ManageUser Muser = new ManageUserImpl();
+	ManageUserImpl Muser = new ManageUserImpl();
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 

@@ -6,8 +6,9 @@ import javax.persistence.Persistence;
 
 import crispr.domain.Article;
 import crispr.domain.User;
+import crispr.domain.UserChercheur;
 
-public class ManageUserImpl implements ManageUser {
+public class ManageUserImpl {
 	EntityManager entityManager;
 	
 	public ManageUserImpl() {
@@ -24,9 +25,8 @@ public class ManageUserImpl implements ManageUser {
 	public void creerUser (crispr.domain.User user) throws  typeException, passException {
 		String login = user.getLogin();
 		String password = user.getPassword();
-		String type = user.getType();
 		//trouver la fonction random
-		if (type != "Visiteur" || type != "Chercheur"){
+		if (user instanceof User || user instanceof UserChercheur ){
 			throw new typeException("Erreur dans le type, veuillez recommencer la saisie s'il vous plaît");
 		}
 		else if (password.isEmpty() || password.length() < 6 ){
@@ -34,7 +34,7 @@ public class ManageUserImpl implements ManageUser {
 		}
 		else
 		{
-			User utilisateur = new User(login,password,type);
+			User utilisateur = new User(login,password);
 			entityManager.persist(utilisateur);
 			//creer automatiquement l'utilisateur dans la bdd normalement
 		}
@@ -49,13 +49,14 @@ public class ManageUserImpl implements ManageUser {
 		    super(message);
 		  }        
 	}
-	public void supprimerUser(String login, String password, String type){
-		//voir comment interagir avec la BDD
+
+	public void supprimerUser(User user) {
+		// TODO Auto-generated method stub
+		
 	}
-	
-	public void ajouterArticleUser(String titre, String repoImage, String contenu)
-	{
-		Article article = new Article(titre, repoImage, contenu);
+
+	public void ajouterArticleUser(Article article) {
+		// TODO Auto-generated method stub
 		
 	}
 

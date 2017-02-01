@@ -11,22 +11,16 @@ public class User {
 	
 	@JsonIgnore
 	private long id;
-	
 	private String login;
-	
 	private String password;
-	
-	private String type;
-	
 	private Article article;
 	
 	public User() {
 	}
 	//constructeur
-	public User (String log, String pass, String type) {
+	public User (String log, String pass) {
 		this.login=log;
 		this.password = pass;
-		this.type = type;
 	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -49,12 +43,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public Article getArticle() {
