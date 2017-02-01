@@ -1,12 +1,16 @@
-function posteCtrl ($scope) {
+function posteCtrl ($scope, $http) {
     //requete
     $http.get("/poste")
         .success(function (response){
+
             $scope.poste = [
                 {
-                    titre: response.data
+                    titre: 'Bonjour'
                 }
             ];
+            console.log(poste.titre);
         })
-        .error();
+        .error(function (){
+            console.log("Erreur de la requete");
+        });
 }
