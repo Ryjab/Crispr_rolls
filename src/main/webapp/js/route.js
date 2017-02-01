@@ -11,6 +11,9 @@ angular.module("crispr", ['ngRoute']).config(
         }).when('/poste', {
             templateUrl: 'partials/poste.html',
             controller : posteCtrl
+        }).when('/publication', {
+            templateUrl: 'partials/formulairePoste.html',
+            controller : posteCtrl
         }).otherwise({
             redirectTo: '/'
         });
