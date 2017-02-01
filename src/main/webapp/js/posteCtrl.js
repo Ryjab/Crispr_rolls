@@ -7,5 +7,7 @@ function posteCtrl ($scope) {
             repoImage : 'essai repoImage',
             contenu: 'essai contenu'
         };
-    console.log("OK");
+    $scope.soumettreFormulairePoste = function (){
+
+    }
 }
