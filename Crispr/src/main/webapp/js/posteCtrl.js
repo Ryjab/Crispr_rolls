@@ -1,13 +1,16 @@
-function posteCtrl ($scope) {
+function posteCtrl ($scope, $http) {
     //requete
-    $scope.poste =
-        {
-            //remplir ces champs avec les valeurs du formulaire
-            titre: 'essai titre',
-            repoImage : 'essai repoImage',
-            contenu: 'essai contenu'
-        };
-    $scope.soumettreFormulairePoste = function (){
+    $http.get("/poste")
+        .success(function (response){
 
-    }
+            $scope.poste = [
+                {
+                    titre: 'Bonjour'
+                }
+            ];
+            console.log(poste.titre);
+        })
+        .error(function (){
+            console.log("Erreur de la requete");
+        });
 }
