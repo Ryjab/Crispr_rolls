@@ -8,6 +8,9 @@ angular.module("crispr", ['ngRoute']).config(
             templateUrl: 'partials/home.html'
         }).when('/connexion', {
             templateUrl: 'partials/connexion.html'
+        }).when('/poste', {
+            templateUrl: 'partials/poste.html',
+            controller : posteCtrl
         }).otherwise({
             redirectTo: '/'
         });
