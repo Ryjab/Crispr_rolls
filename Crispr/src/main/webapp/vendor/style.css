@@ -1,0 +1,19 @@
+.navElement
+{
+	text-align:center;
+	padding:10px;
+}
+.navElement:hover
+{
+	background:#289dcc;
+}
+.navElement a
+{
+	color:white;
+	font-size:20px;
+	text-align:center;
+}
+.navElement a:link
+{
+	text-decoration: none;
+}
