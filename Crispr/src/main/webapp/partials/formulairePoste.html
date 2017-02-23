@@ -1,18 +1,23 @@
 <div>
     <form novalidate>
-        <label>
-            Titre de l'article:
-        <input type="text" ng-model="poste.titre" /><br />
-        </label>
-        <label>
-            Image
-        </label>
-        <label>
-            Contenu de l'article
-            <textarea type="text" ng-model="poste.contenu" >
+        <div class="form-group">
+			<p>
+				<label>Titre de l'article:</label>
+				<input type="text" ng-model="poste.titre"  class="form-control"/>
+			</p>
+			<p>
+				<label>Image:</label>
+				<input type="file" ng-model="poste.image"/>
+			</p>
+			<p>
+				<label>Contenu de l'article:</label>
+				<textarea type="text" ng-model="poste.contenu"  class="form-control">
 
-            </textarea><br />
-        </label>
-        <input type="submit" ng-click="soumettreFormulairePoste(poste)" value="Enregistrer" />
+				</textarea>
+			</p>
+			<p>
+				<center><input type="submit" ng-click="soumettreFormulairePoste(poste)" value="Enregistrer"/></center>
+			</p>
+        </div>
     </form>
 </div>
