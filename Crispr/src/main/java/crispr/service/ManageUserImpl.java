@@ -50,13 +50,21 @@ public class ManageUserImpl {
 	}
 
 	public void supprimerUser(User user) {
-		entityManager.remove(user);
+		EntityManagerFactory emfactory = Persistence.
+				createEntityManagerFactory( "Eclipselink_JPA" );
+			EntityManager entityManager = emfactory.
+				createEntityManager( );
+			entityManager.getTransaction( ).begin( );
+			entityManager.remove(user);
+			entityManager.getTransaction( ).commit( );
+			entityManager.close( );
+			emfactory.close( );
 	}
 
-	public void ajouterArticleUser(Article article) {
-		// TODO Auto-generated method stub
+
 		
-	}
+		
+
 
 	
 	

@@ -1,5 +1,8 @@
 package crispr.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class UserChercheur extends User {
 	private String familyName;
 	private String firstname;

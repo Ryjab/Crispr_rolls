@@ -3,13 +3,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import net.minidev.json.annotate.JsonIgnore;
 
 @Entity
+@Table
 public class User {
 	
-	@JsonIgnore
+	
 	private long id;
 	private String login;
 	private String password;
@@ -22,8 +25,10 @@ public class User {
 		this.login=log;
 		this.password = pass;
 	}
+
+	@JsonIgnore
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy= GenerationType.AUTO) 	
 	public long getId() {
 		return id;
 	}
@@ -45,6 +50,7 @@ public class User {
 		this.password = password;
 	}
 
+	@OneToOne
 	public Article getArticle() {
 		return article;
 	}

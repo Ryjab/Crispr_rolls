@@ -19,14 +19,10 @@ import crispr.service.ManageUserImpl.typeException;
 
 @RestController
 public class ArticleController {
-	ManageArticle manageArticle = new ManageArticle();
+	//ManageArticle manageArticle = new ManageArticle();
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/test")
-    public User greeting(@RequestParam(value="name", defaultValue="World") String name) {
-		return null;
-    }
     //obtenir la liste de tout les articles
     @RequestMapping(value = "/articles", method = RequestMethod.GET)
     public List<Article> listArticle(){
@@ -36,12 +32,14 @@ public class ArticleController {
     @RequestMapping(value = "/article", method = RequestMethod.GET)
     public Article getArticle(@RequestParam(value="titre") String titre){
 			//jpa retrouve article avec titre = titre.
-    		return null;
+    		Article newarticle = new Article(1,"toto","kkk","test");
+    		return newarticle;
 		
     }
     //créer un article
-    @RequestMapping(value = "/article", method = RequestMethod.POST)
+    @RequestMapping(value = "/CreateArticle", method = RequestMethod.POST)
 public void ajoutArticle(@RequestBody Article newArticle){
-    	manageArticle.creerArticle(newArticle);
+    	//manageArticle.creerArticle(newArticle);
+    	System.out.println("creer un article" + newArticle);
     }
 }

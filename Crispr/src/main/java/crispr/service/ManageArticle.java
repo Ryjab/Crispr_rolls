@@ -11,17 +11,25 @@ public class ManageArticle {
 	private List<Article> listarticle;
 	EntityManager entityManager;
 	public ManageArticle() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("manager1");
-		entityManager = emf.createEntityManager();
+		
+
 	}
 public void creerArticle(Article article)
 	{
+		EntityManagerFactory emfactory = Persistence.
+			createEntityManagerFactory( "Eclipselink_JPA" );
+		EntityManager entityManager = emfactory.
+			createEntityManager( );
+		entityManager.getTransaction( ).begin( );
 		entityManager.persist(article);
 		listarticle.add(article);
+		entityManager.getTransaction( ).commit( );
+		entityManager.close( );
+		emfactory.close( );
 	}
-public void supprimerArticle(String titre)
+public void supprimerArticle(Article article)
 {
-	
+	entityManager.remove(article);
 }
 
 }
