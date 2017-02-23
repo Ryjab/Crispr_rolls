@@ -45,6 +45,21 @@ a.formConnection:hover {
   text-decoration: none;
 }
 
+
+.boxFormCon
+{
+border-radius: 11px 11px 11px 11px;
+-moz-border-radius: 11px 11px 11px 11px;
+-webkit-border-radius: 11px 11px 11px 11px;
+border: 2px solid darkGrey;
+padding:20px;
+text-align:center;
+}
+.FormCon
+{
+margin-top:10px;
+margin-bottom:10px;
+}
 input[type=submit] {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
