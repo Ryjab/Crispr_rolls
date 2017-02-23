@@ -8,6 +8,8 @@ function posteCtrl ($scope) {
             contenu: ''
         };
     $scope.soumettreFormulairePoste = function (poste){
+        $scope.titre = poste.titre;
         console.log(poste);
+        console.log($scope.titre);
     }
 }
