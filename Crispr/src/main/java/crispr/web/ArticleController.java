@@ -39,6 +39,7 @@ public class ArticleController {
     		return null;
 		
     }
+    //créer un article
     @RequestMapping(value = "/article", method = RequestMethod.POST)
 public void ajoutArticle(@RequestBody Article newArticle){
     	manageArticle.creerArticle(newArticle);
