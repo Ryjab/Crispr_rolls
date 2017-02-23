@@ -9,20 +9,18 @@ function posteCtrl ($scope, $http) {
                 contenu: ''
             };
         $scope.soumettreFormulairePoste = function (poste) {
-            $http.post('http://localhost:8080/CreateArticle').then(function (data) {
-                console.log(data);
-                $scope.id_article = poste.id_article;
-                $scope.titre = poste.titre;
-                $scope.repoImage = poste.repoImage;
-                $scope.contenu = poste.contenu;
-                console.log(poste);
-                console.log($scope.id_article);
-                console.log($scope.repoImage);
-                console.log($scope.titre);
-                console.log($scope.contenu);
-            }).error(function (reject) {
-                console.log(reject);
+            console.log("data"+ poste);
+            $http({
+            url: 'http://localhost:8080/CreateArticle',
+            method: "POST",
+            data: poste,
+            headers: {'Content-Type': 'application/json'}
+        }).success(function (data, status, headers, config) {
+                console.log(data); 
+            }).error(function (data, status, headers, config) {
+               console.log("error"); 
             });
+           
         }
 
 
