@@ -19,7 +19,7 @@ public void creerArticle(Article article)
 		entityManager.persist(article);
 		listarticle.add(article);
 	}
-public void supprimer article(String titre)
+public void supprimerArticle(String titre)
 {
 	
 }

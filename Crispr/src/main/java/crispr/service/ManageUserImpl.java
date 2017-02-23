@@ -50,8 +50,7 @@ public class ManageUserImpl {
 	}
 
 	public void supprimerUser(User user) {
-		// TODO Auto-generated method stub
-		
+		entityManager.remove(user);
 	}
 
 	public void ajouterArticleUser(Article article) {
