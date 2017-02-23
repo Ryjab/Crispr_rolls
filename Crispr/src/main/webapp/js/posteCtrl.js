@@ -1,3 +1,4 @@
+
 function posteCtrl ($scope, $http) {
         $scope.poste =
             {
@@ -23,4 +24,6 @@ function posteCtrl ($scope, $http) {
                 console.log(reject);
             });
         }
+
+
 }
