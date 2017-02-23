@@ -23,7 +23,7 @@ public class UserController {
     public User greeting(@RequestParam(value="name", defaultValue="World") String name) {
 		return null;
     }
-    @RequestMapping(value = "/User", method = RequestMethod.POST)
+    @RequestMapping(value = "/CreateUser", method = RequestMethod.POST)
     public void AddUser(@RequestBody User user){
     	
     	try {
