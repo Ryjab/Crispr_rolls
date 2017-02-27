@@ -1,5 +1,6 @@
 package crispr.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -8,28 +9,30 @@ import javax.persistence.Persistence;
 import crispr.domain.Article;
 
 public class ManageArticle {
-	private List<Article> listarticle;
 	EntityManager entityManager;
 	public ManageArticle() {
-		
+		EntityManagerFactory emfactory = Persistence.
+				createEntityManagerFactory( "manager1" );
+			 entityManager = emfactory.
+				createEntityManager( );	
 
 	}
 public void creerArticle(Article article)
 	{
-		EntityManagerFactory emfactory = Persistence.
-			createEntityManagerFactory( "Eclipselink_JPA" );
-		EntityManager entityManager = emfactory.
-			createEntityManager( );
 		entityManager.getTransaction( ).begin( );
 		entityManager.persist(article);
-		listarticle.add(article);
-		entityManager.getTransaction( ).commit( );
-		entityManager.close( );
-		emfactory.close( );
+		entityManager.getTransaction( ).commit( );	
 	}
 public void supprimerArticle(Article article)
 {
+
+	entityManager.getTransaction( ).begin( );
 	entityManager.remove(article);
+	entityManager.getTransaction( ).commit( );
+
+}
+public List<Article> listArticle(){
+	return entityManager.createQuery("select c from Article").getResultList();
 }
 
 }

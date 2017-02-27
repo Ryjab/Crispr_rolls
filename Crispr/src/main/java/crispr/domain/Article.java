@@ -21,6 +21,11 @@ public class Article{
 		this.repoImage = repoImage;
 		this.contenu = contenu;
 	}
+	@Override
+	public String toString() {
+		return "Article [id_article=" + id_article + ", titre=" + titre + ", repoImage=" + repoImage + ", contenu="
+				+ contenu + "]";
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId_article() {
