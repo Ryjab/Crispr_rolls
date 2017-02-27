@@ -34,5 +34,8 @@ public void supprimerArticle(Article article)
 public List<Article> listArticle(){
 	return entityManager.createQuery("select c from Article").getResultList();
 }
-
+public Article unArticle(String titre)
+{
+	return (Article) entityManager.createQuery("select a from Article where titre="+titre).getSingleResult();	
+}
 }
